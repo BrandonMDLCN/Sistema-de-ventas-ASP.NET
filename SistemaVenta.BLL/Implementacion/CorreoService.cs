@@ -26,7 +26,7 @@ namespace SistemaVenta.BLL.Implementacion
             {
                 IQueryable<Configuracion> query = await _repositorio.Consultar(c=>c.Recurso.Equals("Servicio_Correo"));
 
-                Dictionary<string, string> Config = query.ToDictionary(keySelector: c => c.Propiedad´, elementSelector: c => c.Valor);
+                Dictionary<string, string> Config = query.ToDictionary(keySelector: c => c.Propiedad, elementSelector: c => c.Valor);
 
                 var credenciales = new NetworkCredential(Config["correo"], Config["clave"]);
                 var correo = new MailMessage()
