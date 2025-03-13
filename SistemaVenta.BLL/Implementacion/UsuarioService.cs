@@ -61,7 +61,7 @@ namespace SistemaVenta.BLL.Implementacion
                 }
                 if (UrlPlantillaCorreo != "")
                 {
-                    UrlPlantillaCorreo = UrlPlantillaCorreo.Replace("[Correo]", usuarioCreado.Correo).Replace("[Clave]", claveGenerada);
+                    UrlPlantillaCorreo = UrlPlantillaCorreo.Replace("[correo]", usuarioCreado.Correo).Replace("[clave]", claveGenerada);
 
                     string htmlCorreo = "";
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(UrlPlantillaCorreo);
@@ -176,6 +176,7 @@ namespace SistemaVenta.BLL.Implementacion
             Usuario resutado = query.Include(r => r.IdRolNavigation).FirstOrDefault();
             return resutado;
         }
+
         public async Task<bool> GuardarPerfil(Usuario entidad)
         {
             try
@@ -197,6 +198,7 @@ namespace SistemaVenta.BLL.Implementacion
                 throw;
             }
         }
+
         public async Task<bool> CambiarClave(int IdUsuario, string ClaveActual, string ClaveNueva)
         {
             try
