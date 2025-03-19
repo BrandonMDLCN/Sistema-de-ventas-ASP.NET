@@ -18,7 +18,7 @@ public partial class Rol
 
     public DateTime? FechaRegistro { get; set; }
 
-    public virtual ICollection<RolMenu> RolMenus { get; set; } = new List<RolMenu>();
+    public virtual ICollection<RolMenu> RolMenus { get; set; }
 
-    public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
+    public virtual ICollection<Usuario> Usuarios { get; set; }
 }

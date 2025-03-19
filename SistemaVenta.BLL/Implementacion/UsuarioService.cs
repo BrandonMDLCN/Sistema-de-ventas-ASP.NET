@@ -116,6 +116,7 @@ namespace SistemaVenta.BLL.Implementacion
                 usuarioEditar.Correo = entidad.Correo;
                 usuarioEditar.Telefono = entidad.Telefono;
                 usuarioEditar.IdRol = entidad.IdRol;
+                usuarioEditar.EsActivo = entidad.EsActivo;
 
                 if(usuarioEditar.NombreFoto=="")
                 {
@@ -231,7 +232,7 @@ namespace SistemaVenta.BLL.Implementacion
                 string claveGenerada = _utilidadesService.GenerarClave();
                 usuarioEncontrado.Clave = _utilidadesService.ConvertirSha256(claveGenerada);
 
-                UrlPlantillaCorreo = UrlPlantillaCorreo.Replace("[Clave]", claveGenerada);
+                UrlPlantillaCorreo = UrlPlantillaCorreo.Replace("[clave]", claveGenerada);
 
                 string htmlCorreo = "";
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(UrlPlantillaCorreo);

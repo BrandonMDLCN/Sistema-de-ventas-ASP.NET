@@ -49,11 +49,11 @@ namespace SistemaVenta.AplicacionWeb.Controllers
                 string nombreFoto = "";
                 Stream fotoStream = null;
 
-                if(foto != null)
+                if (foto != null)
                 {
                     string nombreEnCodigo = Guid.NewGuid().ToString("N");
                     string extension = Path.GetExtension(foto.FileName);
-                    nombreFoto = string.Concat(nombreEnCodigo,extension);
+                    nombreFoto = string.Concat(nombreEnCodigo, extension);
                     fotoStream = foto.OpenReadStream();
                 }
 
@@ -65,7 +65,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
                 gResponse.Estado = true;
                 gResponse.Objeto = vmUsuario;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 gResponse.Estado = false;
                 gResponse.Mensaje = ex.Message;

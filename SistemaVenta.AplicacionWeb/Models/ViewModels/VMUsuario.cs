@@ -1,6 +1,4 @@
-﻿using SistemaVenta.Entity;
-
-namespace SistemaVenta.AplicacionWeb.Models.ViewModels
+﻿namespace SistemaVenta.AplicacionWeb.Models.ViewModels
 {
     public class VMUsuario
     {

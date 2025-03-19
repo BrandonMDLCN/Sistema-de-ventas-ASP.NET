@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SistemaVenta.Entity;
 
-public partial class Usuario
+public class Usuario
 {
     public Usuario()
     {
@@ -31,5 +31,5 @@ public partial class Usuario
 
     public virtual Rol? IdRolNavigation { get; set; }
 
-    public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
+    public virtual ICollection<Venta> Venta { get; set; }
 }
