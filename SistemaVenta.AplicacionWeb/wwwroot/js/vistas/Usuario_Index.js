@@ -190,9 +190,9 @@ $("#tbdata tbody").on("click", ".btn-editar", function(){
 $("#tbdata tbody").on("click", ".btn-eliminar", function () {
     let fila;
     if ($(this).closest("tr").hasClass("child")) {
-        filaSeleccionada = $(this).closest("tr").prev();
+        fila = $(this).closest("tr").prev();
     } else {
-        filaSeleccionada = $(this).closest("tr");
+        fila = $(this).closest("tr");
     }
 
     const data = tablaData.row(fila).data();    
